@@ -50,11 +50,9 @@
 }
 
 .main-wrap {
-
   width:100%;
 
   max-width:1920px;
-  
 }
 
 .home-main-div span {
@@ -76,4 +74,9 @@
 
 .loading-text:hover {
   width:100%;
+}
+
+.project-list-wrap {
+   height:650px; 
+   overflow-y:scroll;
 }

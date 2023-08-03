@@ -46,7 +46,7 @@ function App() {
 
         </nav>
 
-      <div className="main-wrap  border-black  md:border-r md:p-0 md:p-4 md:my-6 md:mr-6 overflow-hidden">
+      <div className="main-wrap  border-black  md:border-r md:p-0 md:p-4 md:my-6 md:mr-6 overflow-hidden max-h-full">
         <Projects/>
       </div>
 
