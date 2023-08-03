@@ -1,6 +1,6 @@
 export default function Home(){
 
-    function AssetHeader(){
+    function HomeHeader(){
 
         return(
         <div className="title-header border-black py-6 text-center md:text-left w-full max-w-xs md:max-w-xl">
@@ -10,7 +10,7 @@ export default function Home(){
         )
     }
 
-    function AssetDetails(){
+    function HomeDetails(){
     
         return(
         <div className="md:absolute text-2xl w-72 md:w-44 md:right-14 md:bottom-1">
@@ -21,9 +21,9 @@ export default function Home(){
 
 
     return(
-    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative">
-        <AssetHeader/>
-        <AssetDetails/>
+    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative ">
+        <HomeHeader/>
+        <HomeDetails/>
     </div>
     )
 }
