@@ -33,7 +33,7 @@ function App() {
 
     return(
       <nav className="main-app-nav  font-semibold md:min-h-screen relative">
-          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-16 py-4 md:py-12  border-black   md:border-r">
+          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-16 py-4 md:py-20  border-black   md:border-r">
              <NavItem ComponentName={`Home`} />
              <NavItem ComponentName={`Projects`} />
              <NavItem ComponentName={`Contacts`} />
@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App grid max-h-screen md:mx-2">
       <NavArea/>
-      <div className="main-content-display border-r border-black  md:m-2 relative">
+      <div className="main-content-display border-r border-black  md:m-2 relative md:overflow-hidden">
         <Home/>
       </div>
 
