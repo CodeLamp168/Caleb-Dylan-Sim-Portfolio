@@ -1,59 +1,70 @@
-import Home from "./assets/Home"
-import Projects from "./assets/Projects"
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import DarkMode from "./assets/small-components/DarkMode";
+import Home from "./assets/Home";
+import Projects from "./assets/Projects";
+import Contacts from "./assets/Contacts";
+import { NavLinks as NavContent } from "./assets/small-components/ImageLink"
+
+
+
+
 
 function App() {
- function LoadingScreen(){
+  function NavArea() {
 
-
-    return(
-      <div className="page-loading fixed w-screen min-h-screen z-50">
-
-        <div className="w-screen min-h-screen relative grid place-content-center">
-
-          <div className="loading-text border-white border-r border-l rounded  text-center overflow-hidden py-4">
-            <h1 className="uppercase text-white text-3xl w-max break-words px-4">Caleb Sim <span className="text-5xl">Portfolio</span></h1>
-          </div>
-
+    function NavItem({ to, ComponentName, customClass = '' }) {
+      return (
+        <div className={`nav-item max-w-max transition-transform md:-rotate-90 cursor-pointer scale-105 md:hover:scale-110" ${customClass} `}>
+          <Link to={to} className="tracking-wide hover:font-bold">
+            {ComponentName}
+          </Link>
         </div>
+      );
+    }
 
-      </div>
-     
-    )
+    return (
+      <nav className="main-app-nav  font-semibold md:h-screen relative  md:flex md:flex-col md:justify-between items-center">
+        <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-4 md:gap-20 py-4 md:py-20   md:border-r">
+          <NavItem to="/" ComponentName="Home" />
+          <NavItem to="/projects" ComponentName="Projects" />
+          <NavItem to="/contacts" ComponentName="Contacts" />
+          <NavItem to="/cv" ComponentName="CV" />
+          <DarkMode />
+        </div>
+        <div className="hidden md:flex flex-col gap-6 absolute bottom-2">
+           <NavContent/>
+        </div>
+      </nav>
+    );
   }
 
   return (
-    <div className="App flex flex-col md:flex-row justify-items-center relative md:mx-10 lg:mx-16 ">
-
-      
-       <nav className="main-nav  border-black border-b md:border-none font-semibold mx-4  md:mx-0 md:min-h-screen md:max-w-min md:py-8 md:pt-24 relative">
-        <div className="nav-line main-nav-border-line hidden md:block "></div>
-          <div className="nav-list flex md:space-y-16 gap-2 py-4 md:py-0 md:gap-0 md:flex-col items-center relative ">
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">Home</a>
-            </div>
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">Projects</a>
-            </div>
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">Contacts</a>
-            </div>
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">CVC</a>
-            </div>
-            <div className="nav-line line-inside-nav transition-transform"></div>
-          </div>
-          <div className="nav-line main-nav-border-line transition-transform hidden md:block "></div>
-
-        </nav>
-
-      <div className="main-wrap  border-black  md:border-r md:p-0 md:p-4 md:my-6 md:mr-6 overflow-hidden max-h-full">
-        <Projects/>
+    <Router>
+      <div className="App grid md:mx-2 overflow-hidden">
+        <NavArea />
+        <div className="main-content-display border-r  md:m-2 relative ">
+          <Routes>
+            <Route path="/" exact element={<Home />} component={Home} />
+            <Route
+              path="/projects"
+              exact
+              element={<Projects />}
+              component={Projects}
+            />
+            <Route
+              path="/contacts"
+              exact
+              element={<Contacts />}
+              component={Contacts}
+            />
+          </Routes>
+        </div>
       </div>
-
-
-  
-    </div>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
