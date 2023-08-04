@@ -7,18 +7,39 @@
   font-family: Rajdhani, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #ffefe1;
+  background-color: #ffecd9;
 }
+
+.App {
+  grid-auto-columns: 1fr; 
+  grid-template-rows: 0.1fr 1.8fr; 
+  gap: 0em 0em; 
+}
+.main-content-display { grid-area: 2 / 1 / 3 / 2; }
+.main-app-nav { grid-area: 1 / 1 / 2 / 2; }
+
+@media(min-width:768px){
+.App {
+    grid-template-columns: auto 1.8fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 1em; 
+    grid-template-areas: 
+      "main-app-nav main-content-display"; 
+  }
+
+.main-content-display { grid-area: main-content-display }
+.main-app-nav { grid-area: main-app-nav }
+
+.nav-list {
+  height:550px;
+}
+}
+
 
 .nav-item a{
  color:black;
  font-family: Rajdhani;
  text-transform: uppercase;
-}
-
-.nav-line {
-  position:absolute;
-  background-color:rgba(37, 37, 37, 0.979);
 }
 
 
@@ -77,6 +98,9 @@
 }
 
 
+
+
+/* Project Section */
 .project-list-wrap {
   overflow:scroll;              
   scrollbar-color:rgba(0, 0, 0, 0.062) #fff2e7;

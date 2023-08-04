@@ -5,7 +5,7 @@ function App() {
  function LoadingScreen(){
 
 
-    return(
+  return(
       <div className="page-loading fixed w-screen min-h-screen z-50">
 
         <div className="w-screen min-h-screen relative grid place-content-center">
@@ -21,37 +21,35 @@ function App() {
     )
   }
 
-  return (
-    <div className="App flex flex-col md:flex-row justify-items-center relative md:mx-10 lg:mx-16 ">
+  function NavArea(){
 
-      
-       <nav className="main-nav  border-black border-b md:border-none font-semibold mx-4  md:mx-0 md:min-h-screen md:max-w-min md:py-8 md:pt-24 relative">
-        <div className="nav-line main-nav-border-line hidden md:block "></div>
-          <div className="nav-list flex md:space-y-16 gap-2 py-4 md:py-0 md:gap-0 md:flex-col items-center relative ">
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">Home</a>
-            </div>
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">Projects</a>
-            </div>
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">Contacts</a>
-            </div>
-            <div className="nav-item max-w-max  md:-rotate-90 transition-transform hover:scale-110">
-              <a href="#">CVC</a>
-            </div>
-            <div className="nav-line line-inside-nav transition-transform"></div>
+    function NavItem({ComponentLink, ComponentName}){
+      return(
+        <div className="nav-item max-w-max  transition-transform md:-rotate-90 cursor-pointer scale-105 md:hover:scale-110">
+              <a className="tracking-wide" href={ComponentLink}>{ComponentName}</a>
+        </div>
+      )
+    }
+
+    return(
+      <nav className="main-app-nav  font-semibold md:min-h-screen relative">
+          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-16 py-4 md:py-12  border-black   md:border-r">
+             <NavItem ComponentName={`Home`} />
+             <NavItem ComponentName={`Projects`} />
+             <NavItem ComponentName={`Contacts`} />
+             <NavItem ComponentName={`CVC`} />
           </div>
-          <div className="nav-line main-nav-border-line transition-transform hidden md:block "></div>
+      </nav>
+    )
+  }
 
-        </nav>
-
-      <div className="main-wrap  border-black  md:border-r md:p-0 md:p-4 md:my-6 md:mr-6 overflow-hidden max-h-full">
-        <Projects/>
+  return (
+    <div className="App grid max-h-screen md:mx-2">
+      <NavArea/>
+      <div className="main-content-display border-r border-black  md:m-2 relative">
+        <Home/>
       </div>
 
-
-  
     </div>
   )
 }

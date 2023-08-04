@@ -13,8 +13,9 @@ export default function Home(){
     function HomeDetails(){
     
         return(
-        <div className="md:absolute text-2xl w-72 md:w-44 md:right-14 md:bottom-1">
-        <p className="font-medium text-center md:text-left">Started indenpent studies on Front End Development at 2022. I strive to create good websites and web assets with <span className="font-semibold text-3xl">JS, CSS, SCSS, REACT, & TAILWIND</span></p>
+        <div className="md:absolute text-2xl w-72 md:w-72 md:right-14 md:bottom-10">
+        <p className="font-medium text-center text-3xl md:text-left leading-relaxed">Started independent studies on Front End Development at 2022. Striving to create good websites and web assets with <span className="text-black text-3xl leading-relaxed">JS, CSS, SCSS, REACT, & TAILWIND</span>
+        </p>
         </div>
         )
     }

@@ -51,7 +51,7 @@ export default function Projects(){
                     <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list ">
                         <h1 className="project-subject text-2xl font-bold mb-8">Frontend Mentor Challenges:</h1>
                         
-                        <div className="flex flex-col items-end gap-4">
+                        <div className="flex flex-col items-end gap-12 md:gap-4">
 
                             <ProjectItem Tools={<ReactTailwind/>} ProjectName={`LOOP Studios Landing Page`} weblink={`https://codelamp168.github.io/Loop-Studios-Landing-Page-Tailwind-React/`}/>
                             <ProjectItem Tools={<VanillaJS/>} ProjectName={`News Homepage`}/>
