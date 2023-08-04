@@ -4,7 +4,7 @@ export default function Projects(){
 
         return(
         <div className="title-header py-6 text-center md:text-left w-full max-w-xs md:max-w-xl">
-          <h1 className="text-5xl text-black font-semibold">Projects</h1>
+          <h1 className="text-7xl text-black font-semibold">Projects</h1>
         </div>
         )
     }
