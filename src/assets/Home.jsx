@@ -21,7 +21,7 @@ export default function Home(){
 
 
     return(
-    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative ">
+    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative">
         <HomeHeader/>
         <HomeDetails/>
     </div>

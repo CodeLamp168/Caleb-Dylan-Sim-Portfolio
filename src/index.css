@@ -76,7 +76,32 @@
   width:100%;
 }
 
+
 .project-list-wrap {
-   height:650px; 
-   overflow-y:scroll;
+  overflow:scroll;              
+  scrollbar-color:rgba(0, 0, 0, 0.062) #fff2e7;
+  scrollbar-width:none;
 }
+
+@media(min-width:768px){
+  .project-list-wrap {
+    -webkit-mask-image: linear-gradient(to bottom,  black 20%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
+  .project-name a::after {
+    content:'';
+    position:absolute;
+    width:0%;
+    height:3px;
+    bottom:6px;
+    left:0px;
+    transition:width 200ms ease-in-out;
+    background:black;
+    }
+    
+  .project-name a:hover::after {
+      width:100%;
+  }
+}
+
+

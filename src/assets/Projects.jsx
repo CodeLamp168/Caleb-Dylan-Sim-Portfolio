@@ -18,12 +18,12 @@ export default function Projects(){
 
             //fix responsive error
             return(
-                <div className="flex flex-col lg:flex-row items-center  md:items-end w-72 md:w-auto">
+                <div className="flex flex-col lg:flex-row items-center  md:items-end w-72 md:w-auto border-b border-black">
                             <ul className=" flex gap-2 px-2 font-semibold">
                                 {Tools}    
                             </ul>
-                            <li className=" px-2 text-left md:text-right text-5xl font-semibold cursor-pointer transition-transform">
-                                <a  href={weblink}>{ProjectName}</a>
+                            <li className="project-name px-2 text-center md:text-right text-5xl font-semibold cursor-pointer transition-transform duration-700 hover:scale-105 md:hover:scale-y-110 lg:hover:scale-105 relative">
+                                <a  className="relative" href={weblink}>{ProjectName}</a>
                             </li>
                 </div>
             )
@@ -31,29 +31,29 @@ export default function Projects(){
 
 
         const VanillaHTML = () => {
-            return <><p>HTML,</p> <p>CSS:</p></>;
+            return <><p className="">HTML</p> <p className=" " >CSS:</p></>;
           };
         
         const ReactTailwind = () => {
-            return <><p>REACT, </p> <p>Tailwind:</p></>;
+            return <><p className=" ">REACT </p> <p className=" ">Tailwind:</p></>;
         };
         const VanillaSCSSJS = () => {
-            return <><p>HTML,</p> <p>SCSS,</p> <p>JS:</p></>
+            return <><p className=" ">HTML</p> <p className="  ">SCSS</p> <p className=" ">JS:</p></>
         };
 
         const VanillaJS = () => {
-            return <><p>HTML,</p> <p>CSS,</p> <p>JS:</p></>;
+            return <><p className=" ">HTML</p> <p className="  ">CSS</p> <p className=" ">JS:</p></>;
         };
        
         return(
-            <div className="project-list-wrap max-w-max md:absolute md:right-0">
-                <ul className="text-right flex flex-col gap-6 ">
+            <div className="project-list-wrap max-w-max md:absolute md:right-0 h-4/5 relative overflow-y-scroll lg:pr-4">
+                <ul className="text-right flex flex-col gap-6">
                     <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list ">
-                        <h1 className="project-subject text-2xl font-bold mb-4">Frontend Mentor Challenges:</h1>
+                        <h1 className="project-subject text-2xl font-bold mb-8">Frontend Mentor Challenges:</h1>
                         
                         <div className="flex flex-col items-end gap-4">
-                            <ProjectItem Tools={<ReactTailwind/>} ProjectName={`LOOP Studios Landing Page`}/>
-                            <ProjectItem Tools={<VanillaHTML/>} ProjectName={`Testimonial Grid`}/>
+
+                            <ProjectItem Tools={<ReactTailwind/>} ProjectName={`LOOP Studios Landing Page`} weblink={`https://codelamp168.github.io/Loop-Studios-Landing-Page-Tailwind-React/`}/>
                             <ProjectItem Tools={<VanillaJS/>} ProjectName={`News Homepage`}/>
                             <ProjectItem Tools={<VanillaSCSSJS/>} ProjectName={`Space Program Tourism Site`}/>
                             <ProjectItem Tools={<VanillaSCSSJS/>} ProjectName={`Interactive Card Details`}/>      
@@ -64,14 +64,12 @@ export default function Projects(){
 
                     <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list">
                         <h1 className="project-subject text-2xl font-bold my-4">My Own Projects:</h1>
-                        <div className="flex flex-col items-end gap-4">
+                        <div className="flex flex-col items-end gap-4 ">
                             <ProjectItem Tools={<VanillaJS/>} ProjectName={`Barotrauma Faction Card`}/>
                             <ProjectItem Tools={<VanillaJS/>} ProjectName={`Pokedex API`}/>
-                            <ProjectItem Tools={<VanillaJS/>} ProjectName={`Barotrauma Faction Card`}/>
-                            <ProjectItem Tools={<VanillaJS/>} ProjectName={`Pokedex API`}/>
-                            <ProjectItem Tools={<VanillaJS/>} ProjectName={`Barotrauma Faction Card`}/>
-                        
                         </div>
+
+                        <div className="invisible-div-for-fade-effect w-full h-2 md:h-4 mt-24"></div>
 
 
                     </div>
@@ -83,7 +81,7 @@ export default function Projects(){
 
 
     return(
-    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative">
+    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative ">
         <ProjectHeader/>
         <ProjectLists />
     </div>
