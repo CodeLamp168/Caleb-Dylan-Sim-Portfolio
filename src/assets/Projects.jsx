@@ -4,7 +4,7 @@ export default function Projects(){
 
         return(
         <div className="title-header py-6 text-center md:text-left w-full max-w-xs md:max-w-xl">
-          <h1 className="text-7xl text-black font-semibold">Projects</h1>
+          <h1 className="text-7xl lg:text-8xl text-black font-semibold">Projects</h1>
         </div>
         )
     }
@@ -18,11 +18,11 @@ export default function Projects(){
 
             //fix responsive error
             return(
-                <div className="flex flex-col lg:flex-row items-center  md:items-end w-72 md:w-auto border-b border-black">
+                <div className="project-list-item-wrap flex flex-col lg:flex-row items-center  md:items-end w-72 md:w-auto border-b border-black">
                             <ul className=" flex gap-2 px-2 font-semibold">
                                 {Tools}    
                             </ul>
-                            <li className="project-name px-2 text-center md:text-right text-5xl font-semibold cursor-pointer transition-transform duration-700 hover:scale-105 md:hover:scale-y-110 lg:hover:scale-105 relative">
+                            <li className="project-name px-2 text-center md:text-right text-5xl lg:text-6xl font-semibold cursor-pointer transition-transform duration-700 hover:scale-110 md:hover:scale-y-110 lg:hover:scale-105 relative">
                                 <a  className="relative" href={weblink}>{ProjectName}</a>
                             </li>
                 </div>
@@ -65,7 +65,7 @@ export default function Projects(){
                     <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list">
                         <h1 className="project-subject text-2xl font-bold my-4">My Own Projects:</h1>
                         <div className="flex flex-col items-end gap-4 ">
-                            <ProjectItem Tools={<VanillaJS/>} ProjectName={`Barotrauma Faction Card`}/>
+                            <ProjectItem Tools={<VanillaJS/>} ProjectName={`Barotrauma Faction Card`} weblink={`https://codelamp168.github.io/BaroTrauma-Faction-Card/`}/>
                             <ProjectItem Tools={<VanillaJS/>} ProjectName={`Pokedex API`}/>
                         </div>
 

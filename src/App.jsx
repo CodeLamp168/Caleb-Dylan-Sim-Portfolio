@@ -26,14 +26,14 @@ function App() {
     function NavItem({ComponentLink, ComponentName}){
       return(
         <div className="nav-item max-w-max  transition-transform md:-rotate-90 cursor-pointer scale-105 md:hover:scale-110">
-              <a className="tracking-wide" href={ComponentLink}>{ComponentName}</a>
+              <a className="tracking-wide hover:font-bold" href={ComponentLink}>{ComponentName}</a>
         </div>
       )
     }
 
     return(
       <nav className="main-app-nav  font-semibold md:min-h-screen relative">
-          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-16 py-4 md:py-20  border-black   md:border-r">
+          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-24 py-4 md:py-20  border-black   md:border-r">
              <NavItem ComponentName={`Home`} />
              <NavItem ComponentName={`Projects`} />
              <NavItem ComponentName={`Contacts`} />
