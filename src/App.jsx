@@ -47,7 +47,7 @@ function App() {
     <div className="App grid max-h-screen md:mx-2">
       <NavArea/>
       <div className="main-content-display border-r border-black  md:m-2 relative md:overflow-hidden">
-        <Home/>
+        <Projects/>
       </div>
 
     </div>

@@ -37,6 +37,11 @@ export default function Projects(){
         const ReactTailwind = () => {
             return <><p className=" ">REACT </p> <p className=" ">Tailwind:</p></>;
         };
+
+        const ReactSCSS = () => {
+            return <><p className=" ">REACT </p> <p className=" ">SCSS:</p></>;
+        };
+
         const VanillaSCSSJS = () => {
             return <><p className=" ">HTML</p> <p className="  ">SCSS</p> <p className=" ">JS:</p></>
         };
@@ -54,8 +59,8 @@ export default function Projects(){
                         <div className="flex flex-col items-end gap-12 md:gap-4">
 
                             <ProjectItem Tools={<ReactTailwind/>} ProjectName={`LOOP Studios Landing Page`} weblink={`https://codelamp168.github.io/Loop-Studios-Landing-Page-Tailwind-React/`}/>
-                            <ProjectItem Tools={<VanillaJS/>} ProjectName={`News Homepage`}/>
-                            <ProjectItem Tools={<VanillaSCSSJS/>} ProjectName={`Space Program Tourism Site`}/>
+                            <ProjectItem Tools={<VanillaJS/>} ProjectName={`News Homepage`} weblink={`https://codelamp168.github.io/News-Homepage-Front-End-Mentor-CHALLENGE/#`}/>
+                            <ProjectItem Tools={<ReactSCSS/>} ProjectName={`Space Program Tourism Site`} weblink={`https://codelamp168.github.io/Space-Tourism-Site/`}/>
                             <ProjectItem Tools={<VanillaSCSSJS/>} ProjectName={`Interactive Card Details`}/>      
                             <ProjectItem Tools={<VanillaHTML/>} ProjectName={`Testimonial Grid`}/>
                         </div>
