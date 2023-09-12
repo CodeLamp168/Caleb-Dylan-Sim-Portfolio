@@ -101,6 +101,33 @@
   width:100%;
 }
 
+.project-btn {
+  position:relative;
+}
+
+.project-btn::before {
+  position:absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  background: none;
+  left:-2px;
+  bottom:5px;
+  z-index:3;
+}
+
+@media(min-width:768px){
+  .project-btn::before{
+    left:-20px;
+  }
+}
+
+
+.project-btn.active-project-btn::before {
+  background: black;
+}
+
 
 
 
@@ -133,7 +160,7 @@
     }
     
   .project-name a:hover::after {
-      width:100%;
+      width:110%;
   }
 }
 
@@ -142,6 +169,7 @@
 
 .title-header {
   animation:fadeSlideDown 1s forwards;
+
 }
 .project-list-item-wrap  {
   animation: fadeSlideUp 1s forwards;
@@ -160,21 +188,26 @@
 }
 
 
+
 @media(min-width:768px){
 
   .title-header {
     animation:fadeSlideRight 1s forwards;
+
   }
   .project-list-wrap {
     animation: fadeSlideUp 1s forwards;
+ 
   }
   
   .project-list-item-wrap li {
     animation: fadeSlideLeft 1s forwards;
+
   }
   
   .project-list-item-wrap ul {
     animation: fadeSlideRight 1s forwards;
+
   }
 
   .home-text-area {
@@ -229,10 +262,11 @@
 @keyframes fadeSlideLeft {
   0% {
     opacity: 0;
-    transform: translateX(50px); /* Initial position */
+    transform: translateX(50px); 
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* Final position */
+    transform: translateX(0); 
   }
 }
+
