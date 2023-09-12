@@ -168,7 +168,7 @@
 /* animations */
 
 .title-header {
-  animation:fadeSlideDown 1s forwards;
+  animation:projectAnimation 1s forwards;
 
 }
 .project-list-item-wrap  {
@@ -191,10 +191,6 @@
 
 @media(min-width:768px){
 
-  .title-header {
-    animation:fadeSlideRight 1s forwards;
-
-  }
   .project-list-wrap {
     animation: fadeSlideUp 1s forwards;
  
@@ -270,3 +266,30 @@
   }
 }
 
+
+
+
+@keyframes projectAnimation {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes projectAnimation {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

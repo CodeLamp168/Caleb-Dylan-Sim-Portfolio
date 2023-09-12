@@ -13,28 +13,26 @@ export default function Projects(){
 
   function ConditionalComponent() {
     const [condition, setCondition] = useState(null);
-  
-    useEffect(() => {
 
+    useEffect(() => {
       const timer = setTimeout(() => {
         setCondition(true);
       }, 1000);
-  
+
       return () => clearTimeout(timer);
     }, []);
 
-    
-
-    return condition ? '' : 'title-header';
-
+    return condition
+      ? { animation: 'none' }
+      : { animation: 'projectAnimation 1s forwards' };
   }
+  const styleResult = ConditionalComponent();
 
-  const output = ConditionalComponent(); 
 
     function ProjectHeader({ onFrontEndMentorClick, onIndependentProjectsClick }) {
-
+  
         return (
-          <div className={`${output} py-6 text-center md:text-left w-full max-w-xs md:max-w-xl z-10 `}>
+          <div className={`title-header py-6 text-center md:text-left w-full max-w-xs md:max-w-xl z-10 `} style={styleResult}>
             <h1 className="text-7xl lg:text-8xl text-black font-semibold">Projects</h1>
             <div className="grid grid-flow-col mt-4 md:mt-2 md:grid-flow-row md:gap-4 md:justify-items-start z-10 ml-4">
               <button className={`project-btn font-semibold ${!showProject ? 'active-project-btn' : ''}`} onClick={onIndependentProjectsClick}>My Projects</button>
@@ -91,7 +89,7 @@ export default function Projects(){
         function FrontEndMentor() {
             return (
               <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list">
-                <h1 className="project-subject text-2xl font-bold mb-4">Frontend Mentor Challenges:</h1>
+  
                 <div className="flex flex-col items-end gap-12 md:gap-12">
                   <ProjectItem Tools={<ReactSCSS />} ProjectName={`Space Program Tourism Site`} weblink={`https://codelamp168.github.io/Space-Tourism-Site/`} />
                   <ProjectItem Tools={<ReactTailwind />} ProjectName={`LOOP Studios Landing Page`} weblink={`https://codelamp168.github.io/Loop-Studios-Landing-Page-Tailwind-React/`} />
@@ -108,7 +106,6 @@ export default function Projects(){
           function IndependentProjects() {
             return (
               <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list">
-                <h1 className="project-subject text-2xl font-bold my-4">My Own Projects:</h1>
                 <div className="flex flex-col items-end gap-4 ">
                   <ProjectItem Tools={<VanillaJS />} ProjectName={`Barotrauma Faction Card`} weblink={`https://codelamp168.github.io/BaroTrauma-Faction-Card/`} />
                   <ProjectItem Tools={<VanillaJS />} ProjectName={`Pokedex API`} />
