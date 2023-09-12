@@ -13,24 +13,24 @@ export default function Projects(){
 
   function ConditionalComponent() {
     const [condition, setCondition] = useState(null);
-
+  
     useEffect(() => {
       const timer = setTimeout(() => {
         setCondition(true);
       }, 1000);
-
+  
       return () => clearTimeout(timer);
     }, []);
-
+  
     return condition
       ? { animation: 'none' }
       : { animation: 'projectAnimation 1s forwards' };
-  }
-  const styleResult = ConditionalComponent();
-
+    }
+    const styleResult = ConditionalComponent();
+  
 
     function ProjectHeader({ onFrontEndMentorClick, onIndependentProjectsClick }) {
-  
+
         return (
           <div className={`title-header py-6 text-center md:text-left w-full max-w-xs md:max-w-xl z-10 `} style={styleResult}>
             <h1 className="text-7xl lg:text-8xl text-black font-semibold">Projects</h1>
@@ -42,7 +42,7 @@ export default function Projects(){
             </div>
           </div>
         );
-      }
+    }
 
     function ProjectLists(){
 
@@ -105,7 +105,7 @@ export default function Projects(){
           
           function IndependentProjects() {
             return (
-              <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list">
+              <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list" >
                 <div className="flex flex-col items-end gap-4 ">
                   <ProjectItem Tools={<VanillaJS />} ProjectName={`Barotrauma Faction Card`} weblink={`https://codelamp168.github.io/BaroTrauma-Faction-Card/`} />
                   <ProjectItem Tools={<VanillaJS />} ProjectName={`Pokedex API`} />
@@ -121,7 +121,7 @@ export default function Projects(){
 
        
         return(
-            <div className="project-list-wrap max-w-max md:absolute md:right-0 h-4/5 relative overflow-y-scroll lg:pr-4">
+            <div className="project-list-wrap max-w-max md:absolute md:right-0 h-4/5 relative overflow-y-scroll lg:pr-4" >
                 <ul className="text-right flex flex-col gap-6">
                 <ProjectContent showProject={showProject} />
                 </ul>
