@@ -13,7 +13,7 @@ export default function Home(){
     function HomeDetails(){
     
         return(
-        <div className="home-text-area md:absolute  text-2xl w-72  md:right-14">
+        <div className="home-text-area md:absolute  text-2xl  w-72 md:right-14 md:bottom-10 border-2 ">
         <p className="font-medium text-left text-3xl  leading-relaxed">Started independent studies on Front End Development in 2022. Striving to create good websites and web assets with <span className="text-black text-3xl font-bold">JS, CSS, SCSS, REACT, & TAILWIND</span>
         </p>
         </div>
