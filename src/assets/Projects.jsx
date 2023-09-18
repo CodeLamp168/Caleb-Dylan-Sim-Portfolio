@@ -1,45 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Projects(){
-  const [showProject, setShowProject] = useState(false);
 
-  const handleFrontEndMentorClick = () => {
-    setShowProject(true);
-  };
 
-  const handleIndependentProjectsClick = () => {
-    setShowProject(false);
-  };
 
-  function ConditionalComponent() {
-    const [condition, setCondition] = useState(null);
-  
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setCondition(true);
-      }, 1000);
-  
-      return () => clearTimeout(timer);
-    }, []);
-  
-    return condition
-      ? { animation: 'none' }
-      : { animation: 'projectAnimation 1s forwards' };
-    }
-    const styleResult = ConditionalComponent();
-  
-
-    function ProjectHeader({ onFrontEndMentorClick, onIndependentProjectsClick }) {
+    function ProjectHeader() {
 
         return (
-          <div className={`title-header py-6 text-center md:text-left w-full max-w-xs md:max-w-xl z-10 `} style={styleResult}>
+          <div className='title-header py-6 text-center md:text-left w-full max-w-xs md:max-w-xl z-10'>
             <h1 className="text-7xl lg:text-8xl text-black font-semibold">Projects</h1>
-            <div className="grid grid-flow-col mt-4 md:mt-2 md:grid-flow-row md:gap-4 md:justify-items-start z-10 ml-4">
-              <button className={`project-btn font-semibold ${!showProject ? 'active-project-btn' : ''}`} onClick={onIndependentProjectsClick}>My Projects</button>
-
-              <button className={`project-btn font-semibold ${showProject ? "active-project-btn" : ''}`} onClick={onFrontEndMentorClick}>Frontend Challenges</button>
-             
-            </div>
           </div>
         );
     }
@@ -69,8 +38,6 @@ export default function Projects(){
             return <><p className=" ">HTML</p> <p className="  ">CSS</p> <p className=" ">JS:</p></>;
         };
 
-
-
         function ProjectItem({Tools, ProjectName, weblink = null}){
 
             return(
@@ -84,8 +51,6 @@ export default function Projects(){
                 </div>
             )
         }
-
-
         function FrontEndMentor() {
             return (
               <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list">
@@ -115,15 +80,12 @@ export default function Projects(){
           }
           
 
-          function ProjectContent({ showProject }) {
-            return showProject ? <FrontEndMentor /> : <IndependentProjects />;
-          }
 
        
         return(
             <div className="project-list-wrap max-w-max md:absolute md:right-0 h-4/5 relative overflow-y-scroll lg:pr-4" >
                 <ul className="text-right flex flex-col gap-6">
-                <ProjectContent showProject={showProject} />
+                <FrontEndMentor/>
                 </ul>
             </div>
         )
@@ -132,9 +94,7 @@ export default function Projects(){
 
     return(
     <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative z-0 ">
-        <ProjectHeader
-            onFrontEndMentorClick={handleFrontEndMentorClick}
-            onIndependentProjectsClick={handleIndependentProjectsClick}/>
+        <ProjectHeader/>
         <ProjectLists />
     </div>
     )
