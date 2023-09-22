@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-
+import DarkMode from './assets/small-components/DarkMode';
 import Home from "./assets/Home";
 import Projects from "./assets/Projects";
 import Contacts from './assets/Contacts';
@@ -40,11 +40,12 @@ function App() {
 
     return(
       <nav className="main-app-nav  font-semibold md:min-h-screen relative">
-          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-24 py-4 md:py-20  border-black   md:border-r">
+          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-24 py-4 md:py-20   md:border-r">
           <NavItem to="/" ComponentName="Home" />
           <NavItem to="/projects" ComponentName="Projects" />
           <NavItem to="/contacts" ComponentName="Contacts" />
           <NavItem to="/cv" ComponentName="CV" />
+          <DarkMode/>
           </div>
       </nav>
     )
@@ -54,7 +55,7 @@ function App() {
     <Router>
     <div className="App grid max-h-screen md:mx-2">
       <NavArea/>
-      <div className="main-content-display border-r border-black  md:m-2 relative md:overflow-hidden">
+      <div className="main-content-display border-r   md:m-2 relative md:overflow-hidden">
         <Routes>
           <Route path='/' exact element={<Home/>} component={Home}/>
           <Route path='/projects' exact element={<Projects/>} component={Projects}/>

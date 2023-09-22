@@ -4,7 +4,7 @@ export default function Home(){
 
         return(
         <div className="title-header home-title-header border-black py-6 text-left w-full max-w-xs md:max-w-xl">
-          <h1 className="text-7xl md:text-8xl text-black font-semibold tracking-wider">CALEB SIM</h1>
+          <h1 className="text-7xl md:text-8xl  font-semibold tracking-wider">CALEB SIM</h1>
           <p className="text-4xl pt-2 font-medium tracking-wider">Front End Developer</p>
         </div>
         )
