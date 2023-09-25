@@ -14,7 +14,7 @@ function ContactList() {
             <img
               src={imgSrc}
               alt="image"
-              className="w-8 h-8 transform scale-100 hover:scale-110 transition-transform duration-300"
+              className="contact-logo w-8 h-8 transform scale-100 hover:scale-110 transition-transform duration-300"
             />
           </a>
         );

@@ -13,6 +13,7 @@
   --theme-background: #ffecd9;
   --theme-text: #000000;
   --theme-border: #000000;
+  --theme-icon: invert(0%);
 }
 
 /* Dark Theme */
@@ -20,10 +21,11 @@
   --theme-background: #000000;
   --theme-text: #ffffff;
   --theme-border: #ffffff;
+  --theme-icon: invert(100%);
 }
 
-.App, .main-content-display, .nav-list {
-  transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+.App, .main-content-display, .nav-list, .contact-logo {
+  transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
 .App {
@@ -55,7 +57,7 @@
  }
 
 .nav-list {
-  height:550px;
+  height:620px;
   border-color:var(--theme-border)
 }
 }
@@ -140,10 +142,35 @@
   z-index:3;
 }
 
-@media(min-width:768px){
-  .project-btn::before{
-    left:-20px;
-  }
+
+
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #ffffff00;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.0em;
+  height: 1.0em;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.90em;
+  height: 0.90em;
+  transform: scale(0);
+  transition: 0.3s transform ease-in-out;
+  box-shadow: inset 1em 1em var(--theme-text);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 
 
@@ -151,6 +178,9 @@
   background: black;
 }
 
+.contact-logo  {
+  filter: var(--theme-icon)
+}
 
 
 

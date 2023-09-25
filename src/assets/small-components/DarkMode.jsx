@@ -15,10 +15,10 @@ export default function DarkMode() {
     else setLightMode();
   };
   return (
-    <div className="flex flex-col gap-2">
+    <div className="dark-mode-container flex flex-col gap-2">
       <input
         type="checkbox"
-        className="dark_mode"
+        className="dark-mode"
         id="darkmode-toggle"
         onChange={toggleColorTheme}
       />
