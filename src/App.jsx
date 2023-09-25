@@ -53,7 +53,7 @@ function App() {
 
   return (
     <Router>
-    <div className="App grid max-h-screen md:mx-2">
+    <div className="App grid md:mx-2">
       <NavArea/>
       <div className="main-content-display border-r   md:m-2 relative md:overflow-hidden">
         <Routes>

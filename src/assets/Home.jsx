@@ -14,7 +14,7 @@ export default function Home(){
     
         return(
         <div className="home-text-area md:absolute  text-2xl  w-72 md:right-14 md:bottom-10 ">
-        <p className="font-medium text-left text-3xl  leading-relaxed">Started independent studies on Front End Development in 2022. Striving to create good websites and web assets with <span className="text-black text-3xl font-bold">JS, CSS, SCSS, REACT, & TAILWIND</span>
+        <p className="home-detail-text font-medium text-left text-3xl  leading-relaxed">Started independent studies on Front End Development in 2022. Striving to create good websites and web assets with <span className="text-black text-3xl font-bold">JS, CSS, SCSS, REACT, & TAILWIND</span>
         </p>
         </div>
         )
@@ -22,7 +22,7 @@ export default function Home(){
 
 
     return(
-    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative gap-12 md:gap-0">
+    <div className="Asset-content min-h-screen home-main-div flex flex-col  items-center md:block  p-4  relative gap-12 md:gap-0">
         <HomeHeader/>
         <HomeDetails/>
     </div>

@@ -3,6 +3,7 @@ import Discord from "/svgs/discord.svg";
 import Instagram from "/svgs/instagram.svg";
 import LinkedIn from "/svgs/linkedin.svg";
 import Github from "/svgs/github.svg";
+import FrontEnd from "/svgs/frontendmentor.svg"
 
 function ContactList() {
 
@@ -25,6 +26,7 @@ function ContactList() {
       <ul className="flex flex-row w-64 gap-8 contact-list-ul-container">
         <ImageLink href={'https://github.com/CodeLamp168'} imgSrc={Github} />
         <ImageLink href={'https://www.linkedin.com/in/calebsimdev/'} imgSrc={LinkedIn} />
+        <ImageLink href={'https://www.linkedin.com/in/calebsimdev/'} imgSrc={FrontEnd} />
       </ul>
     </div>
   );
@@ -32,7 +34,7 @@ function ContactList() {
 
 export default function Contacts() {
   return (
-    <div className="Asset-content min-h-full p-2">
+    <div className="Asset-content min-h-screen p-2">
       <PageHeader pageTitle={`Contacts`} />
       <ContactList />
     </div>
