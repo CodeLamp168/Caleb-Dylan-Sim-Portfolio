@@ -1,32 +1,15 @@
 import PageHeader from "./small-components/PageHeader";
-import Discord from "/svgs/discord.svg";
-import Instagram from "/svgs/instagram.svg";
-import LinkedIn from "/svgs/linkedin.svg";
-import Github from "/svgs/github.svg";
-import FrontEnd from "/svgs/frontendmentor.svg"
+import { ContactLinks as ContactContent } from "./small-components/ImageLink";
+
+
 
 function ContactList() {
 
-    const ImageLink = ({ href = '#', imgSrc }) => {
-
-
-        return (
-          <a href={href}>
-            <img
-              src={imgSrc}
-              alt="image"
-              className="contact-logo w-8 h-8 transform scale-100 hover:scale-110 transition-transform duration-300"
-            />
-          </a>
-        );
-      };
 
   return (
-    <div class="contact-list-wrap">
-      <ul className="flex flex-row w-64 gap-8 contact-list-ul-container">
-        <ImageLink href={'https://github.com/CodeLamp168'} imgSrc={Github} />
-        <ImageLink href={'https://www.linkedin.com/in/calebsimdev/'} imgSrc={LinkedIn} />
-        <ImageLink href={'https://www.linkedin.com/in/calebsimdev/'} imgSrc={FrontEnd} />
+    <div className="contact-list-wrap relative">
+      <ul className="flex justify-between gap-8 w-64  contact-list-ul-container ml-6 md:ml-0 ">
+        <ContactContent/>
       </ul>
     </div>
   );

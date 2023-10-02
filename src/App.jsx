@@ -1,36 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import DarkMode from './assets/small-components/DarkMode';
+import DarkMode from "./assets/small-components/DarkMode";
 import Home from "./assets/Home";
 import Projects from "./assets/Projects";
-import Contacts from './assets/Contacts';
+import Contacts from "./assets/Contacts";
+import { NavLinks as NavContent } from "./assets/small-components/ImageLink"
+
+
+
 
 
 function App() {
- function LoadingScreen(){
-  return(
-      <div className="page-loading fixed w-screen min-h-screen z-50">
+  const isMobile = window.innerWidth <= 768;
+  function NavArea() {
 
-        <div className="w-screen min-h-screen relative grid place-content-center">
-
-          <div className="loading-text border-white border-r border-l rounded  text-center overflow-hidden py-4">
-            <h1 className="uppercase text-white text-3xl w-max break-words px-4">Caleb Sim <span className="text-5xl">Portfolio</span></h1>
-          </div>
-
-        </div>
-
-      </div>
-     
-    )
-  }
-
-  function NavArea(){
-
-    function NavItem({ to, ComponentName }) {
+    function NavItem({ to, ComponentName, customClass = '' }) {
       return (
-        <div className="nav-item max-w-max transition-transform md:-rotate-90 cursor-pointer scale-105 md:hover:scale-110">
+        <div className={`nav-item max-w-max transition-transform md:-rotate-90 cursor-pointer scale-105 md:hover:scale-110" ${customClass} `}>
           <Link to={to} className="tracking-wide hover:font-bold">
             {ComponentName}
           </Link>
@@ -38,34 +26,46 @@ function App() {
       );
     }
 
-    return(
-      <nav className="main-app-nav  font-semibold md:min-h-screen relative">
-          <div className="nav-list flex md:flex-col justify-center items-center md:justify-start gap-6 md:gap-24 py-4 md:py-20   md:border-r">
+    return (
+      <nav className="main-app-nav  font-semibold md:h-screen relative  md:flex md:flex-col md:justify-between items-center">
+        <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-4 md:gap-20 py-4 md:py-20   md:border-r">
           <NavItem to="/" ComponentName="Home" />
           <NavItem to="/projects" ComponentName="Projects" />
-          <NavItem to="/contacts" ComponentName="Contacts" />
+          <NavItem to="/contacts" ComponentName="Contacts" customClass="md:hidden" />
           <NavItem to="/cv" ComponentName="CV" />
-          <DarkMode/>
-          </div>
+          <DarkMode />
+        </div>
+        <div className="hidden md:flex flex-col gap-6 absolute bottom-2">
+           <NavContent/>
+        </div>
       </nav>
-    )
+    );
   }
 
   return (
     <Router>
-    <div className="App grid md:mx-2">
-      <NavArea/>
-      <div className="main-content-display border-r   md:m-2 relative md:overflow-hidden">
-        <Routes>
-          <Route path='/' exact element={<Home/>} component={Home}/>
-          <Route path='/projects' exact element={<Projects/>} component={Projects}/>
-          <Route path='/contacts' exact element={<Contacts/>} component={Contacts}/>
-        </Routes>
+      <div className="App grid md:mx-2 overflow-hidden">
+        <NavArea />
+        <div className="main-content-display border-r  md:m-2 relative ">
+          <Routes>
+            <Route path="/" exact element={<Home />} component={Home} />
+            <Route
+              path="/projects"
+              exact
+              element={<Projects />}
+              component={Projects}
+            />
+            <Route
+              path={isMobile ? '/contacts' : '/'}
+              exact
+              element={isMobile ? <Contacts /> : <Home />}
+              component={isMobile ? Contacts : Home }
+            />
+          </Routes>
+        </div>
       </div>
-
-    </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

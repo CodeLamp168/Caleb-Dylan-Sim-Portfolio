@@ -31,7 +31,7 @@ export default function Projects(){
         function ProjectItem({Tools, ProjectName, weblink = null}){
 
             return(
-                <div className="project-list-item-wrap flex flex-col lg:flex-row items-center  md:items-end w-72 md:w-auto">
+                <div className="project-list-item-wrap flex flex-col lg:flex-row items-center  md:items-end w-72 md:w-auto ">
                             <ul className=" flex gap-2 px-2 font-semibold">
                                 {Tools}    
                             </ul>
@@ -43,7 +43,7 @@ export default function Projects(){
         }
         function FrontEndMentor() {
             return (
-              <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list border-red-500">
+              <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list ">
   
                 <div className="flex flex-col items-end gap-12 md:gap-12">
                   <ProjectItem Tools={<ReactSCSS />} ProjectName={`Space Program Tourism Site`} weblink={`https://codelamp168.github.io/Space-Tourism-Site/`} />
@@ -73,7 +73,7 @@ export default function Projects(){
 
        
         return(
-            <div className="project-list-wrap max-w-max md:absolute md:right-0 h-4/5 relative overflow-y-scroll lg:pr-4" >
+            <div className="project-list-wrap max-w-max md:absolute md:right-0 md:pt-16 h-4/5 relative overflow-y-scroll lg:pr-4 " >
                 <ul className="text-right flex flex-col gap-6">
                 <FrontEndMentor/>
                 </ul>
