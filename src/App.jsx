@@ -13,7 +13,6 @@ import { NavLinks as NavContent } from "./assets/small-components/ImageLink"
 
 
 function App() {
-  const isMobile = window.innerWidth <= 768;
   function NavArea() {
 
     function NavItem({ to, ComponentName, customClass = '' }) {
@@ -31,7 +30,7 @@ function App() {
         <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-4 md:gap-20 py-4 md:py-20   md:border-r">
           <NavItem to="/" ComponentName="Home" />
           <NavItem to="/projects" ComponentName="Projects" />
-          <NavItem to="/contacts" ComponentName="Contacts" customClass="md:hidden" />
+          <NavItem to="/contacts" ComponentName="Contacts" />
           <NavItem to="/cv" ComponentName="CV" />
           <DarkMode />
         </div>
@@ -56,10 +55,10 @@ function App() {
               component={Projects}
             />
             <Route
-              path={isMobile ? '/contacts' : '/'}
+              path="/contacts"
               exact
-              element={isMobile ? <Contacts /> : <Home />}
-              component={isMobile ? Contacts : Home }
+              element={<Contacts />}
+              component={Contacts}
             />
           </Routes>
         </div>
