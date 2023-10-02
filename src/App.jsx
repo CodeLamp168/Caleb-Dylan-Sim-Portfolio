@@ -27,7 +27,7 @@ function App() {
 
     return (
       <nav className="main-app-nav  font-semibold md:h-screen relative  md:flex md:flex-col md:justify-between items-center">
-        <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-4 md:gap-20 py-4 md:py-20   md:border-r">
+        <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-4 md:gap-20 py-4 md:py-20 md:border-r">
           <NavItem to="/" ComponentName="Home" />
           <NavItem to="/projects" ComponentName="Projects" />
           <NavItem to="/contacts" ComponentName="Contacts" />
