@@ -84,7 +84,7 @@ export default function Projects(){
 
     return(
     <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative z-0 ">
-        <PageHeader pageTitle={`Project`}/>
+        <PageHeader pageTitle={`Projects`}/>
         <ProjectLists />
     </div>
     )

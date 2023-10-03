@@ -70,10 +70,22 @@ min-height:100vh; }
 }
 
 
-.nav-item a{
- font-family: Rajdhani;
- text-transform: uppercase;
+.nav-item a {
+  font-family: Rajdhani;
+  text-transform: uppercase;
 }
+
+.nav-item:hover {
+  transform:scale(1.2);
+ }
+
+@media(min-width:768px){
+  .nav-item:hover {
+    transform:scale(1.2) rotate(-90deg);
+   }
+
+}
+
 
 
 
@@ -115,7 +127,14 @@ min-height:100vh; }
 }
 
 .home-text-area p {
-  text-indent: 5px;
+  text-indent: 3px;
+}
+
+@media(min-width:1280px){
+  .home-detail-text{
+    font-size:28px;
+    line-height:3.5rem
+  }
 }
 
 

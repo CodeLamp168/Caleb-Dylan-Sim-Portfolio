@@ -41,11 +41,12 @@ export default function Home() {
 
   function HomeDetails() {
     return (
-      <div className="home-text-area md:absolute  text-2xl  w-80 md:w-72 md:right-14 md:bottom-10">
-        <p className="home-detail-text font-medium text-left text-3xl  leading-relaxed">
-          Started independent studies on Front End Development in 2022. Striving
-          to create good websites using a variety of tools
+      <div className="home-text-area md:absolute  p-4 sm:p-0 text-2xl sm:w-7/12  lg:w-8/12 xl:w-80  xl:absolute  xl:bottom-24 xl:right-24">
+        <p className="home-detail-text font-medium text-left  leading-relaxed sm:mt-12 xl:mt-0">
+          21 year old, Entry Level Front End Developer based in the Philippines. Started learning Javascript and the fundamentals of HTML and CSS during 2022. 
         </p>
+  
+
       </div>
     );
   }

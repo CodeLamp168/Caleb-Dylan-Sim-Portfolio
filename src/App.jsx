@@ -17,8 +17,8 @@ function App() {
 
     function NavItem({ to, ComponentName, customClass = '' }) {
       return (
-        <div className={`nav-item max-w-max transition-transform md:-rotate-90 cursor-pointer scale-105 md:hover:scale-110" ${customClass} `}>
-          <Link to={to} className="tracking-wide hover:font-bold">
+        <div className={`nav-item max-w-max transition-transform md:-rotate-90 cursor-pointer" ${customClass} `}>
+          <Link to={to} className="tracking-wide">
             {ComponentName}
           </Link>
         </div>
@@ -26,15 +26,14 @@ function App() {
     }
 
     return (
-      <nav className="main-app-nav  font-semibold md:h-screen relative  md:flex md:flex-col md:justify-between items-center">
-        <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-4 md:gap-20 py-4 md:py-20 md:border-r">
+      <nav className="main-app-nav  font-semibold md:h-screen md:relative  md:flex md:flex-col md:justify-between items-center">
+        <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-8  md:gap-20 py-4 md:py-20 md:border-r">
           <NavItem to="/" ComponentName="Home" />
           <NavItem to="/projects" ComponentName="Projects" />
-          <NavItem to="/contacts" ComponentName="Contacts" />
           <NavItem to="/cv" ComponentName="CV" />
           <DarkMode />
         </div>
-        <div className="hidden md:flex flex-col gap-6 absolute bottom-2">
+        <div className="nav-link-list w-full flex justify-center items-center md:flex-col gap-6  bottom-2 ">
            <NavContent/>
         </div>
       </nav>
@@ -53,12 +52,6 @@ function App() {
               exact
               element={<Projects />}
               component={Projects}
-            />
-            <Route
-              path="/contacts"
-              exact
-              element={<Contacts />}
-              component={Contacts}
             />
           </Routes>
         </div>
