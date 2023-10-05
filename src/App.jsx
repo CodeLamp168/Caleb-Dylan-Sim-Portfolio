@@ -29,7 +29,7 @@ function App() {
       <nav className="main-app-nav  font-semibold md:h-screen md:relative  md:flex md:flex-col md:justify-between items-center">
         <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-8  md:gap-20 py-4 md:py-20 md:border-r">
           <NavItem to="/Caleb-Dylan-Sim-Portfolio/" ComponentName="Home" />
-          <NavItem to="/Caleb-Dylan-Sim-Portfolio/projects" ComponentName="Projects" />
+          <NavItem to="/Caleb-Dylan-Sim-Portfolio/Projects" ComponentName="Projects" />
           <NavItem to="/Caleb-Dylan-Sim-Portfolio/cv" ComponentName="CV" />
           <DarkMode />
         </div>
