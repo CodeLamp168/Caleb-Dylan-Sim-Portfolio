@@ -46,9 +46,9 @@ function App() {
         <NavArea />
         <div className="main-content-display border-r  md:m-2 relative ">
           <Routes>
-            <Route path="/Caleb-Dylan-Sim-Portfolio/" exact element={<Home />} component={Home} />
+            <Route path="/Caleb-Dylan-Sim-Portfolio" forceRefresh={true} exact element={<Home />} component={Home} />
             <Route
-              path="/Caleb-Dylan-Sim-Portfolio/projects"
+              path="/Caleb-Dylan-Sim-Portfolio/projects" forceRefresh={true}
               exact
               element={<Projects />}
               component={Projects}
