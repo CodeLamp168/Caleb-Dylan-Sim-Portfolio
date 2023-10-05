@@ -33,7 +33,7 @@ function App() {
           <NavItem to="/cv" ComponentName="CV" />
           <DarkMode />
         </div>
-        <div className="nav-link-list w-full flex justify-center items-center md:flex-col gap-6  bottom-2 ">
+        <div className="nav-link-list w-full flex justify-center items-center md:flex-col gap-6  mb-4 ">
            <NavContent/>
         </div>
       </nav>

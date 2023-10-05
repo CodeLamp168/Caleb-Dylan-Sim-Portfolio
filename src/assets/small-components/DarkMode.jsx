@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function DarkMode() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -14,12 +14,34 @@ export default function DarkMode() {
   };
 
   const toggleColorTheme = (e) => {
-    if (e.target.checked) {
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+      setDarkMode();
+      localStorage.setItem('color-theme', 'dark');
+      localStorage.setItem('checkbox-state', 'checked');
+    } else {
+      setLightMode();
+      localStorage.setItem('color-theme', 'light');
+      localStorage.setItem('checkbox-state', 'unchecked');
+    }
+  };
+
+  useEffect(() => {
+    const savedColor = localStorage.getItem('color-theme');
+    const savedCheckboxState = localStorage.getItem('checkbox-state');
+    const checktoggle = document.getElementById('darkmode-toggle');
+
+    if (savedColor === 'dark') {
       setDarkMode();
     } else {
       setLightMode();
     }
-  };
+
+    if (savedCheckboxState === 'checked' && checktoggle) {
+      checktoggle.checked = true;
+    }
+  }, []);
 
   return (
     <div className="dark-mode-container flex flex-col gap-2 relative md:top-10 md:right-0">
