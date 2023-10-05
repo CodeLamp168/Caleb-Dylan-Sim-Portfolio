@@ -48,7 +48,7 @@ function App() {
           <Routes>
             <Route path="/Caleb-Dylan-Sim-Portfolio" forceRefresh={true} exact element={<Home />} component={Home} />
             <Route
-              path="/Caleb-Dylan-Sim-Portfolio/projects" forceRefresh={true}
+              path="/Caleb-Dylan-Sim-Portfolio/Projects" forceRefresh={true}
               exact
               element={<Projects />}
               component={Projects}
