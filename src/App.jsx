@@ -6,6 +6,7 @@ import DarkMode from "./assets/small-components/DarkMode";
 import Home from "./assets/Home";
 import Projects from "./assets/Projects";
 import Contacts from "./assets/Contacts";
+import About from "./assets/About";
 import { NavLinks as NavContent } from "./assets/small-components/ImageLink"
 
 
@@ -27,10 +28,11 @@ function App() {
 
     return (
       <nav className="main-app-nav  font-semibold md:h-screen md:relative  md:flex md:flex-col md:justify-between items-center">
-        <div className="nav-list flex md:flex-col justify-center items-center md:justify-between gap-8  md:gap-20 py-4 md:py-20 md:border-r">
+        <div className="nav-list flex md:flex-col justify-center items-center md:justify-around gap-8  md:gap-20 py-4 md:py-20 md:border-r">
           <NavItem to="/Caleb-Dylan-Sim-Portfolio/" ComponentName="Home" />
           <NavItem to="/Caleb-Dylan-Sim-Portfolio/Projects" ComponentName="Projects" />
-          <NavItem to="/Caleb-Dylan-Sim-Portfolio/cv" ComponentName="CV" />
+          <NavItem to="/Caleb-Dylan-Sim-Portfolio/About" ComponentName="About" />
+    
           <DarkMode />
         </div>
         <div className="nav-link-list w-full flex justify-center items-center md:flex-col gap-6  mb-4 ">
@@ -52,6 +54,12 @@ function App() {
               exact
               element={<Projects />}
               component={Projects}
+            />
+             <Route
+              path="/Caleb-Dylan-Sim-Portfolio/About" forceRefresh={true}
+              exact
+              element={<About />}
+              component={About}
             />
           </Routes>
         </div>

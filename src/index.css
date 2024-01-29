@@ -4,17 +4,16 @@
 @tailwind utilities;
 
 :root {
-  font-family: Rajdhani, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Lato, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
-}
-
-/*light mode*/
-:root {
+  
+ /*Default theme */
   --theme-background: #fdddbd;
   --theme-text: #000000;
   --theme-border: #000000;
   --theme-icon: invert(0%);
 }
+
 
 /* Dark Theme */
 [data-theme="dark"] {
@@ -218,6 +217,7 @@ input[type="checkbox"]:checked::before {
   overflow:scroll;              
   scrollbar-color:var(--theme-background) #fff2e7;
   scrollbar-width:none;
+
 }
 
 

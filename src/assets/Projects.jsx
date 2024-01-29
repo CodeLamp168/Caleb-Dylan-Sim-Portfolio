@@ -28,6 +28,10 @@ export default function Projects(){
             return <><p className=" ">HTML</p> <p className="  ">CSS</p> <p className=" ">JS:</p></>;
         };
 
+        const SvelteJS = () => {
+          return <><p className=" ">SVELTE</p> <p className="  ">CSS</p> <p className=" ">JS:</p></>;
+      };
+
         function ProjectItem({Tools, ProjectName, weblink = null}){
 
             return(
@@ -46,11 +50,13 @@ export default function Projects(){
               <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list ">
   
                 <div className="flex flex-col items-end gap-12 md:gap-12">
-                  <ProjectItem Tools={<ReactSCSS />} ProjectName={`Space Program Tourism Site`} weblink={`https://codelamp168.github.io/Space-Tourism-Site/`} />
-                  <ProjectItem Tools={<ReactTailwind />} ProjectName={`LOOP Studios Landing Page`} weblink={`https://codelamp168.github.io/Loop-Studios-Landing-Page-Tailwind-React/`} />
-                  <ProjectItem Tools={<ReactCSS />} ProjectName={`Room HomePage`} weblink={`https://codelamp168.github.io/room-homepage-vite-react/`} />
-                  <ProjectItem Tools={<VanillaJS />} ProjectName={`News Homepage`} weblink={`https://codelamp168.github.io/News-Homepage-Front-End-Mentor-CHALLENGE/`} />
-                  <ProjectItem Tools={<VanillaJS />} ProjectName={`Interactive Card Details`} weblink={`https://codelamp168.github.io/Interactive-Card-Details/`} />
+                  <ProjectItem Tools={<VanillaJS />} ProjectName={`Watch Catalogue`} weblink={`https://codelamp168.github.io/Watch-Catalogue-Webpage/`} />
+                  <ProjectItem Tools={<ReactSCSS />} ProjectName={`Space Program Tourism`} weblink={`https://codelamp168.github.io/Space-Tourism-Site/`} />
+                  <ProjectItem Tools={<ReactTailwind />} ProjectName={`LOOP Studios`} weblink={`https://codelamp168.github.io/Loop-Studios-Landing-Page-Tailwind-React/`} />
+                  <ProjectItem Tools={<SvelteJS/>} ProjectName={`TRAVEL`} weblink={`https://codelamp168.github.io/travelsite/`} />
+                  <ProjectItem Tools={<VanillaJS />} ProjectName={`NEWS Flexbox`} weblink={`https://codelamp168.github.io/News-Homepage-Front-End-Mentor-CHALLENGE/`} />
+                  <ProjectItem Tools={<VanillaJS />} ProjectName={`Verve Elegance`} weblink={`https://codelamp168.github.io/Verve-Elegence-Promo-Page/`} />
+            
               
                 </div>
                 <div className="invisible-div-for-fade-effect w-full h-2 md:h-4 mt-24"></div>
@@ -58,16 +64,16 @@ export default function Projects(){
             );
           }
           
-          function IndependentProjects() {
-            return (
-              <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list" >
-                <div className="flex flex-col items-end gap-4 ">
-                  <ProjectItem Tools={<VanillaJS />} ProjectName={`Barotrauma Faction Card`} weblink={`https://codelamp168.github.io/BaroTrauma-Faction-Card/`} />
-                  <ProjectItem Tools={<VanillaJS />} ProjectName={`Pokedex API`} />
-                </div>
-              </div>
-            );
-          }
+          // function IndependentProjects() {
+          //   return (
+          //     <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list" >
+          //       <div className="flex flex-col items-end gap-4 ">
+          //         <ProjectItem Tools={<VanillaJS />} ProjectName={`Barotrauma Faction Card`} weblink={`https://codelamp168.github.io/BaroTrauma-Faction-Card/`} />
+          //         <ProjectItem Tools={<VanillaJS />} ProjectName={`Pokedex API`} />
+          //       </div>
+          //     </div>
+          //   );
+          // }
           
 
 
@@ -84,7 +90,7 @@ export default function Projects(){
 
     return(
     <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative z-0 ">
-        <PageHeader pageTitle={`Projects`}/>
+        <PageHeader pageTitle={`PROJECTS`}/>
         <ProjectLists />
     </div>
     )
