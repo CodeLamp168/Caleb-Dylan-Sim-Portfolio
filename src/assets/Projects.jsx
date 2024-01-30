@@ -35,7 +35,7 @@ export default function Projects(){
         function ProjectItem({Tools, ProjectName, weblink = null}){
 
             return(
-                <div className="project-list-item-wrap flex flex-col lg:flex-row items-center  md:items-end w-72 md:w-auto ">
+                <div className="project-list-item-wrap flex flex-col lg:flex-row items-center  md:items-start lg:items-end min-w-full md:w-auto border-1 border-black border-b ">
                             <ul className=" flex gap-2 px-2 font-semibold">
                                 {Tools}    
                             </ul>
@@ -49,7 +49,7 @@ export default function Projects(){
             return (
               <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list ">
   
-                <div className="flex flex-col items-end gap-12 md:gap-12">
+                <div className="flex flex-col items-start gap-12 md:gap-12">
                   <ProjectItem Tools={<VanillaJS />} ProjectName={`Watch Catalogue`} weblink={`https://codelamp168.github.io/Watch-Catalogue-Webpage/`} />
                   <ProjectItem Tools={<ReactSCSS />} ProjectName={`Space Program Tourism`} weblink={`https://codelamp168.github.io/Space-Tourism-Site/`} />
                   <ProjectItem Tools={<ReactTailwind />} ProjectName={`LOOP Studios`} weblink={`https://codelamp168.github.io/Loop-Studios-Landing-Page-Tailwind-React/`} />

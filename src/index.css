@@ -261,9 +261,9 @@ input[type="checkbox"]:checked::before {
   animation:fadeSlideRight 1s forwards;
 
 }
-.project-list-item-wrap  {
+/* .project-list-item-wrap  {
   animation: fadeSlideUp 1s forwards;
-}
+} */
 
 .project-list-item-wrap li {
   animation: fadeSlideLeft 1s forwards;
@@ -284,20 +284,25 @@ input[type="checkbox"]:checked::before {
 
 @media(min-width:768px){
 
-  .project-list-wrap {
+  /* .project-list-wrap {
     animation: fadeSlideUp 1s forwards;
  
-  }
+  } */
+
+ 
   
   .project-list-item-wrap li {
-    animation: fadeSlideLeft 1s forwards;
+    -webkit-animation: slide-in-blurred-right 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-right 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 
   }
   
   .project-list-item-wrap ul {
-    animation: fadeSlideRight 1s forwards;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
   }
+
+
 
   .home-text-area {
     animation:fadeSlideRight 1s forwards;
@@ -316,6 +321,22 @@ input[type="checkbox"]:checked::before {
   }
 
 }
+
+
+ @-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 
 
 @keyframes fadeSlideDown {
@@ -393,6 +414,49 @@ input[type="checkbox"]:checked::before {
     }
   }
 }
+
+
+ @-webkit-keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
 
 
 .skill-item {
