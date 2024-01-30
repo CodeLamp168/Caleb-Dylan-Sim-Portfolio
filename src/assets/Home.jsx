@@ -4,6 +4,7 @@ import sassImage from "/svgs/sass.svg"
 import tailwindImage from "/svgs/tailwindcss.svg"
 import htmlImage from "/svgs/html5.svg"
 
+
 export default function Home() {
   const ImageDisplay = ({ imgSrc, imgName }) => {
     return (
@@ -41,9 +42,9 @@ export default function Home() {
 
   function HomeDetails() {
     return (
-      <div className="home-text-area md:absolute  p-4 sm:p-0 text-2xl sm:w-7/12  lg:w-8/12 xl:w-80  xl:absolute  xl:bottom-24 xl:right-24">
-        <p className="home-detail-text font-medium text-left  leading-relaxed sm:mt-12 xl:mt-0">
-          21 year old, Front End Developer based in the Philippines.<br /> Need a website developed or fixed? I can help you. 
+      <div className="home-text-area p-4 sm:p-0 text-2xl sm:w-7/12  lg:w-8/12">
+        <p className="home-detail-text font-medium text-left  leading-relaxed  ">
+          21 Year Old, Front End Developer based in the Philippines.<br /> Need a website developed or fixed? I can help you. 
         </p>
   
 
@@ -52,9 +53,10 @@ export default function Home() {
   }
 
   return (
-    <div className="Asset-content min-h-screen home-main-div flex flex-col  items-center md:block    relative gap-12 md:gap-0">
+    <div className="Asset-content min-h-screen home-main-div flex flex-col  items-center md:block  relative gap-4 md:gap-0">
       <HomeHeader />
       <HomeDetails />
+
     </div>
   );
 }
