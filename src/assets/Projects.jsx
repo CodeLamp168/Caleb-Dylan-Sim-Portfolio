@@ -64,22 +64,13 @@ export default function Projects(){
             );
           }
           
-          // function IndependentProjects() {
-          //   return (
-          //     <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list" >
-          //       <div className="flex flex-col items-end gap-4 ">
-          //         <ProjectItem Tools={<VanillaJS />} ProjectName={`Barotrauma Faction Card`} weblink={`https://codelamp168.github.io/BaroTrauma-Faction-Card/`} />
-          //         <ProjectItem Tools={<VanillaJS />} ProjectName={`Pokedex API`} />
-          //       </div>
-          //     </div>
-          //   );
-          // }
-          
+   
+    
 
 
        
         return(
-            <div className="project-list-wrap max-w-max md:absolute md:right-0 md:pt-16 h-4/5 relative overflow-y-scroll lg:pr-4 " >
+            <div className="project-list-wrap max-w-max md:absolute md:right-0 md:pt-16 h-4/5 relative overflow-y-scroll lg:pr-1 " >
                 <ul className="text-right flex flex-col gap-6">
                 <FrontEndMentor/>
                 </ul>
@@ -89,7 +80,7 @@ export default function Projects(){
 
 
     return(
-    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-4  relative z-0 ">
+    <div className="Asset-content home-main-div flex flex-col  items-center md:block min-h-full p-0 sm:p-4  relative z-0 overflow-x-hidden">
         <PageHeader pageTitle={`PROJECTS`}/>
         <ProjectLists />
     </div>

@@ -21,7 +21,7 @@ export default function Home() {
 
   function HomeHeader() {
     return (
-      <div className="title-header home-title-header border-black py-4 text-left w-full max-w-xs md:max-w-xl">
+      <div className="home-title-header border-black py-4 text-left w-full max-w-xs md:max-w-xl">
         <h1 className="text-7xl md:text-8xl  font-semibold tracking-wider">
           CALEB SIM
         </h1>
@@ -53,7 +53,7 @@ export default function Home() {
   }
 
   return (
-    <div className="Asset-content min-h-screen home-main-div flex flex-col  items-center md:block  relative gap-4 md:gap-0">
+    <div className="Asset-content min-h-screen home-main-div flex flex-col  items-center md:block  relative gap-4 md:gap-0 overflow-x-hidden">
       <HomeHeader />
       <HomeDetails />
 
