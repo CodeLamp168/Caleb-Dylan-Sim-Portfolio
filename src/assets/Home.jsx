@@ -21,14 +21,14 @@ export default function Home() {
 
   function HomeHeader() {
     return (
-      <div className="home-title-header border-black py-4 text-left w-full max-w-xs md:max-w-xl">
+      <div className="home-title-header border-black py-4 text-left w-full max-w-xs md:max-w-xl pl-4 ">
         <h1 className="text-7xl md:text-8xl  font-semibold tracking-wider">
           CALEB SIM
         </h1>
         <p className="text-3xl pt-2 font-medium tracking-wider">
           Junior Front End Developer
         </p>
-        <ul className="language-display flex  w-full flex-wrap mt-6 md:gap-2">
+        <ul className="language-display flex  w-full flex-wrap mt-6 md:gap-2 ">
           <ImageDisplay imgSrc={htmlImage} imgName={'HTML'} />
           <ImageDisplay imgSrc={cssImage}  imgName={'CSS'} />
           <ImageDisplay imgSrc={jsImage}  imgName={'Javascript'} />
@@ -42,7 +42,7 @@ export default function Home() {
 
   function HomeDetails() {
     return (
-      <div className="home-text-area p-4 sm:p-0 text-2xl sm:w-7/12  lg:w-8/12">
+      <div className="home-text-area p-4 sm:pl-4 text-2xl sm:w-auto md:w-7/12  lg:w-8/12">
         <p className="home-detail-text font-medium text-left  leading-relaxed  ">
           21 Year Old, Front End Developer based in the Philippines.<br /> Need a website developed or fixed? I can help you. 
         </p>
@@ -53,7 +53,7 @@ export default function Home() {
   }
 
   return (
-    <div className="Asset-content min-h-screen home-main-div flex flex-col  items-center md:block  relative gap-4 md:gap-0 overflow-x-hidden">
+    <div className="Asset-content min-h-screen home-main-div flex flex-col items-start mt-4 sm:mt-0 border-1 border-black  md:block  relative gap-4 md:gap-0 overflow-x-hidden">
       <HomeHeader />
       <HomeDetails />
 

@@ -11,11 +11,11 @@ const ImageLink = ({ href = '#', imgSrc, linkWidth }) => {
 
 
     return (
-      <a href={href}>
+      <a href={href} className="contact-item">
         <img
           src={imgSrc}
           alt="image"
-          className={`contact-logo  transform scale-100 hover:scale-110 transition-transform duration-300 ${linkWidth}`}
+          className={`contact-logo ${linkWidth}`}
         />
       </a>
     );

@@ -35,11 +35,11 @@ export default function Projects(){
         function ProjectItem({Tools, ProjectName, weblink = null}){
 
             return(
-                <div className="project-list-item-wrap flex flex-col lg:flex-row items-center  md:items-start lg:items-end min-w-full md:w-auto border-1 border-black border-b ">
+                <div className="project-list-item-wrap flex flex-col lg:flex-row items-start  md:items-start lg:items-end min-w-full md:w-auto border-1 border-black border-b ">
                             <ul className=" flex gap-2 px-2 font-semibold">
                                 {Tools}    
                             </ul>
-                            <li className="project-name px-2 text-center  md:text-right text-5xl lg:text-6xl font-semibold cursor-pointer transition-transform duration-700 hover:scale-110 md:hover:scale-y-110 lg:hover:scale-105 relative">
+                            <li className="project-name px-2 text-left text-5xl lg:text-6xl font-semibold cursor-pointer transition-transform duration-700 hover:scale-110 md:hover:scale-y-110 lg:hover:scale-105 relative">
                                 <a  className="relative" href={weblink}>{ProjectName}</a>
                             </li>
                 </div>
@@ -47,7 +47,7 @@ export default function Projects(){
         }
         function FrontEndMentor() {
             return (
-              <div className="flex flex-col items-center md:items-end front-end-mentor-challenge-list ">
+              <div className="flex flex-col items-start md:items-end front-end-mentor-challenge-list ">
   
                 <div className="flex flex-col items-start gap-12 md:gap-12">
                   <ProjectItem Tools={<VanillaJS />} ProjectName={`Watch Catalogue`} weblink={`https://codelamp168.github.io/Watch-Catalogue-Webpage/`} />
